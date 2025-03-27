@@ -9,5 +9,5 @@ printf("Digite sua altura: ");
 scanf("%f", &altura);
 float daltura = altura*altura;
 float imc = peso/daltura;
-printf("De acordo com o seu peso %.1f e a sua altura %.2f: seu IMC eh %.2f", peso, altura, imc);
+printf("De acordo com o seu peso %.1f e a sua altura %.2f: seu IMC eh %.2f.", peso, altura, imc);
 }

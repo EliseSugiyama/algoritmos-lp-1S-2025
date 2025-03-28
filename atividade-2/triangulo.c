@@ -13,5 +13,5 @@ int main(int argc, char* argv[]){
     float area = bt*ht/2;
 
     printf("A area desse triangulo eh %.2f!", area);
-
+    
 }

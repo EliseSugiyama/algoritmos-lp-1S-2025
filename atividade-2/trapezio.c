@@ -14,5 +14,5 @@ int main(int argc, char* argv[]){
         scanf("%f", &h);
 
     printf("A area desse trapezio eh %.2f!", (B+b)*h/2);
-
+    
 }

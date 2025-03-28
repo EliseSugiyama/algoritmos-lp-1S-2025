@@ -12,4 +12,5 @@ int main(int argc, char* argv[]){
     float area = PI*(raio*raio);
 
     printf("A area desse circulo eh %.2f!", area);
+    
 }

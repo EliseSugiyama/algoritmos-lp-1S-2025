@@ -11,5 +11,5 @@ int main(int argc, char* argv[]){
         scanf("%f", &d);
 
     printf("A area desse losango eh %.2f!", D*d/2);
-
+    
 }

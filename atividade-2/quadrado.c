@@ -11,5 +11,5 @@ int main (int argc, char* argv[]){
     float a_quadrado = powf(quadrado, quadrado);
 
     printf("A area desse quadrado eh %.2f!", a_quadrado);
-
+    
 }

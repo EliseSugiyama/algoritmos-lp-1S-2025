@@ -11,5 +11,5 @@ int main(int argc, char* argv[]){
         scanf("%f", &altura);
 
     printf("A area desse retangulo eh %.2f!", base*altura);
-
+    
 }

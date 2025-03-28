@@ -2,14 +2,16 @@
 
 int main(int argc, char* argv[]){
 
-    float ht, bt;
+    float bt, ht;
 
-    printf("Digite a base do triangulo: ");
-    scanf("%.2f", &bt);
+    printf("Digite a BASE: ");
+        scanf("%f", &bt);
 
-    printf("Digite o altura do triangulo: ");
-    scanf("%.2f", &ht); 
+    printf("Digite a ALTURA: ");
+        scanf("%f", &ht);
 
-    printf("A area desse triangulo eh %.2f!", (bt*ht)/2);
+    float area = bt*ht/2;
+
+    printf("A area desse triangulo eh %.2f!", area);
 
 }

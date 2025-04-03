@@ -14,4 +14,5 @@ int main(int argc, char* argv[]){
 
     printf("A area desse triangulo eh %.2f!", area);
     
+    return 0;
 }

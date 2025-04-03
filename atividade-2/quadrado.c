@@ -12,4 +12,5 @@ int main (int argc, char* argv[]){
 
     printf("A area desse quadrado eh %.2f!", a_quadrado);
     
+    return 0;
 }

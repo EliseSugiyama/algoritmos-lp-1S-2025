@@ -12,4 +12,5 @@ int main(int argc, char* argv[]){
 
     printf("A area desse losango eh %.2f!", D*d/2);
     
+    return 0;
 }

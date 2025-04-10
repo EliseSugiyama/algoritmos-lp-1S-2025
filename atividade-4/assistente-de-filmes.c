@@ -1,13 +1,14 @@
-#include <stdio.h>
+#include <stdio.h> 
 
 int main(int argc, char* argv[]){
 
-    char opcoes, leve, comedia, animacao, intenso, terror, acao;
+    char opcao;
 
     printf("\n============================================================================\n");
     printf("Bem-vindo ao assistente de escolha de filmes!\nEu irei te recomendar algo para assistir de acordo com as suas preferencias!\n");
     printf("============================================================================\n");
-
+    
+    do{
     printf("\nEscolha uma das opcoes: \n");
     printf("--~--~--~--~--~--~--~--\n");
     printf("1 - filmes leves\n");
@@ -15,9 +16,9 @@ int main(int argc, char* argv[]){
     printf("2 - filmes intensos\n");
     printf("=======================\n");
 
-    scanf(" %c", &opcoes);
+    scanf(" %c", &opcao);
 
-    if(opcoes == '1'){
+    if(opcao == '1'){
         printf("\n========================================\n");
         printf("Opcao selecionada: FILMES LEVES\n");
         printf("========================================\n");
@@ -28,9 +29,9 @@ int main(int argc, char* argv[]){
         printf("A - Animacao\n");
         printf("================================\n");
 
-        scanf(" %c", &leve);
+        scanf(" %c", &opcao);
         
-        if(leve == 'C' || leve == 'c'){
+        if(opcao == 'C' || opcao == 'c'){
             printf("\n========================================\n");
             printf("Opcao selecionada: COMEDIA\n");
             printf("========================================\n");
@@ -41,9 +42,9 @@ int main(int argc, char* argv[]){
             printf("M - Comedia Musical\n");
             printf("=============================\n");
 
-            scanf(" %c", &comedia);
+            scanf(" %c", &opcao);
 
-            if(comedia == 'R' || comedia == 'r'){
+            if(opcao == 'R' || opcao == 'r'){
                 printf("\n========================================\n");
                 printf("Opcao selecionada: COMEDIA ROMANTICA\n");
                 printf("========================================\n");
@@ -55,7 +56,7 @@ int main(int argc, char* argv[]){
                 printf("========================================\n");
             }
 
-            else if(comedia == 'M' || comedia == 'm'){
+            else if(opcao == 'M' || opcao == 'm'){
                 printf("\n========================================\n");
                 printf("Opcao selecionada: COMEDIA MUSICAL\n");
                 printf("========================================\n");
@@ -74,7 +75,7 @@ int main(int argc, char* argv[]){
             }
         }
 
-        else if(leve == 'A' || leve == 'a'){
+        else if(opcao == 'A' || opcao == 'a'){
             printf("\n========================================\n");
             printf("Opcao selecionada: ANIMACAO\n");
             printf("========================================\n");
@@ -85,9 +86,9 @@ int main(int argc, char* argv[]){
             printf("Z - Para maiores de 10 anos\n");
             printf("==============================\n");
 
-            scanf(" %c", &animacao);
+            scanf(" %c", &opcao);
 
-            if(animacao == 'L' || animacao == 'l'){
+            if(opcao == 'L' || opcao == 'l'){
                 printf("\n========================================\n");
                 printf("Opcao selecionada: INDICACAO LIVRE\n");
                 printf("========================================\n");
@@ -99,7 +100,7 @@ int main(int argc, char* argv[]){
                 printf("========================================\n");
             }
 
-            else if(animacao == 'Z' || animacao == 'z'){
+            else if(opcao == 'Z' || opcao == 'z'){
                 printf("\n==========================================\n");
                 printf("Opcao selecionada: PARA MAIORES DE 10 ANOS\n");
                 printf("==========================================\n");
@@ -125,7 +126,7 @@ int main(int argc, char* argv[]){
     }
 }
 
-    else if(opcoes == '2'){
+    else if(opcao == '2'){
         printf("\n========================================\n");
         printf("Opcao selecionada: FILMES INTENSOS\n");
         printf("========================================\n");
@@ -136,9 +137,9 @@ int main(int argc, char* argv[]){
         printf("A - Acao\n");
         printf("===================================\n");
 
-        scanf(" %c", &intenso);
+        scanf(" %c", &opcao);
 
-        if(intenso == 'T' || intenso == 't'){
+        if(opcao == 'T' || opcao == 't'){
             printf("\n========================================\n");
             printf("Opcao selecionada: TERROR\n");
             printf("========================================\n");
@@ -149,9 +150,9 @@ int main(int argc, char* argv[]){
             printf("S - Terror Sobrenatural\n");
             printf("============================\n");
 
-            scanf(" %c", &terror);
+            scanf(" %c", &opcao);
 
-            if(terror == 'P' || terror == 'p'){
+            if(opcao == 'P' || opcao == 'p'){
                 printf("\n========================================\n");
                 printf("Opcao selecionada: TERROR PSICOLOGICO\n");
                 printf("========================================\n");
@@ -163,7 +164,7 @@ int main(int argc, char* argv[]){
                 printf("========================================\n");
             }
 
-            else if(terror == 'S' || terror == 's'){
+            else if(opcao == 'S' || opcao == 's'){
                 printf("\n========================================\n");
                 printf("Opcao selecionada: TERROR SOBRENATURAL\n");
                 printf("========================================\n");
@@ -182,7 +183,7 @@ int main(int argc, char* argv[]){
             }
         }
 
-        else if(intenso == 'A' || intenso == 'a'){
+        else if(opcao == 'A' || opcao == 'a'){
             printf("\n========================================\n");
             printf("Opcao selecionada: ACAO\n");
             printf("========================================\n");
@@ -193,9 +194,9 @@ int main(int argc, char* argv[]){
             printf("A - Aventura Realista\n");
             printf("==========================\n");
 
-            scanf(" %c", &acao);
+            scanf(" %c", &opcao);
 
-            if(acao == 'S' || acao == 's'){
+            if(opcao == 'S' || opcao == 's'){
                 printf("\n========================================\n");
                 printf("Opcao selecionada: SUPER HEROIS\n");
                 printf("========================================\n");
@@ -207,7 +208,7 @@ int main(int argc, char* argv[]){
                 printf("========================================\n");
             }
 
-            else if(acao == 'A' || acao == 'a'){
+            else if(opcao == 'A' || opcao == 'a'){
                 printf("\n========================================\n");
                 printf("Opcao selecionada: AVENTURA REALISTA\n");
                 printf("========================================\n");
@@ -237,6 +238,16 @@ int main(int argc, char* argv[]){
         printf("ERROR! OPCAO INVALIDA!\n");
         printf("======================\n");
     }
+    
+    printf("\nDeseja escolher um novo filme?\n");
+    printf("--~--~--~--~--~--~--~--~--~--~\n");
+    printf("S - Sim\n");
+    printf("------------------------------\n");
+    printf("N - Nao\n");
+
+    scanf(" %c", &opcao);
+    }
+    while (opcao == 'S' || opcao == 's');
 
     return 0;
 

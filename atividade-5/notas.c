@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
             scanf("%f", &notas[i]);
 
             if(0.0 > notas[i] || notas[i] > 10.0){
-                printf("\n\n!Nota invalida! Por favor digite uma nota entre 0.0 e 10.0!");
+                printf("\n\n!Nota invalida! Por favor digite uma nota entre 0 e 10!");
 
             } else {
                 if(ma < notas[i]){

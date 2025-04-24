@@ -2,7 +2,10 @@
 
 int main(int argc, char* argv[]){
 
-    int i, alunos, ap = 0, k;
+    char opcao;
+
+    do{
+    int i, alunos = 0, ap = 0, k;
     float ma = 0.0, me = 10.0, soma = 0, media;
 
     printf("\nDigite a quantidade de alunos: \n");
@@ -16,9 +19,10 @@ int main(int argc, char* argv[]){
             scanf("%f", &notas[i]);
 
             if(0.0 > notas[i] || notas[i] > 10.0){
-                printf("\n\n!Nota invalida! Por favor digite uma nota entre 0 e 10!");
-
+            printf("\n\nNota invalida! Por favor digite uma nota entre 0 e 10!\n");
+            
             } else {
+
                 if(ma < notas[i]){
                     ma = notas[i];
                 }
@@ -31,10 +35,9 @@ int main(int argc, char* argv[]){
                     ap++;
                 }
                 soma += notas[i];
-
-            }
+            } 
         } while(0.0 > notas[i] || notas[i] > 10.0);
-    } 
+    }
 
     media = soma/alunos;
 
@@ -48,12 +51,18 @@ int main(int argc, char* argv[]){
         scanf("%d", &k);
 
         if(k > alunos){
-            printf("\n\n!POSICAO INVALIDA! POR FAVOR DIGITE UMA POSICAO VALIDA!");
+            printf("\n\nPOSICAO INVALIDA! POR FAVOR DIGITE UMA POSICAO VALIDA!");
         } 
     } while(k > alunos);
 
     printf("\n - Nota do aluno da posicao %d: %.1f\n", k, notas[k-1]);
-    printf(" ");
+
+    printf("\nGostaria de recomecar?\n");
+    printf("S - Sim\n");
+    printf("N - Nao\n");
+    scanf(" %c", &opcao);
+
+    } while (opcao == 'S' || opcao == 's');
 
     return 0;
 }

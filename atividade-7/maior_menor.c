@@ -14,10 +14,7 @@ int main(int argc, char* argv[]){
         for(int i = 0; i < argc-1; i++){
             numeros[i] = atoi(argv[i+1]);
         }
-        for(int i = 0; i < argc-1; i++){
-            numeros[i] = atoi(argv[i+1]);
-        }
-        printf("Maior: %d\nMenor: %d", maior_e(numeros, argc-1), menor_e(numeros, argc-1));
+        printf("Menor: %d\nMaior: %d", menor_e(numeros, argc-1), maior_e(numeros, argc-1));
     }
     return 0;
 }

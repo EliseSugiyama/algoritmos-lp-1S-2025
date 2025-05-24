@@ -18,14 +18,12 @@ int main(int argc, char* argv[]){
         printf("%d", maior_2n(x, y));
     } 
     
-    else if(argv == 4){
+    else if(argc == 4){
         x = atoi(argv[1]);
         y = atoi(argv[2]);
         z = atoi(argv[3]);
         printf("%d", maior_3n(x, y, z));
-    }
-
-    else {
+    } else {
         for(int i=0; i < argc-1; i++){
             numeros[i] = atoi(argv[i+1]);
         }

@@ -1,0 +1,6 @@
+Numero minimo: 1
+Numero maximo: 6
+Numero esperado: 3
+Numero sorteado: 6
+Resultado: nao sorteado!
+

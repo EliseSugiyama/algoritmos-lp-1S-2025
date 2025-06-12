@@ -9,24 +9,25 @@ typedef struct sorteio{
 int main(int argc, char* argv[]){
 
     if(argc != 4){
-        printf("Informe 3 argumentos");
+        printf("Informe 3 argumentos.\n");
 
         return 1;
     }
 
     sorteio s;
 
-    s.pri = atof(argv[1]);
-    s.sec = atof(argv[2]);
-    s.ter = atof(argv[3]);
+    s.pri = atoi(argv[1]);
+    s.sec = atoi(argv[2]);
+    s.ter = atoi(argv[3]);
 
 
-    if(argv[2] < argv[1]){
-        printf("O segundo argumento deve ser maior que o primeiro.");
+    if(s.pri >= s.sec){
+        printf("O segundo argumento deve ser maior que o primeiro.\n");
 
         return 1;
-    } else if(argv[1] == 0 || argv[2] == 0 || argv[3] == 0){
-        printf("Os argumentos precisam ser maior que 0.");
+
+    } else if(s.ter < s.pri || s.ter > s.sec){
+        printf("O numero esperado deve estar entre %d e %d!\n", s.pri, s.sec);
 
         return 1;
     }
@@ -39,8 +40,26 @@ int main(int argc, char* argv[]){
         printf("Parabens! Voce foi sorteado!\n");
     } else {
         printf("Ugh! Mais sorte na proxima vez!\n");
-        printf("O numero sorteado foi: %d", num_aleatorio);
     }
+
+    FILE *arq = fopen("log.txt", "a");
+    if(arq == NULL){
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+
+    fprintf(arq, "Numero minimo: %d\n", s.pri);
+    fprintf(arq, "Numero maximo: %d\n", s.sec);
+    fprintf(arq, "Numero esperado: %d\n", s.ter);
+    fprintf(arq, "Numero sorteado: %d\n", num_aleatorio);
+
+    if(num_aleatorio == s.ter){
+        fprintf(arq, "Resultado: sorteado!\n\n");
+    } else {
+        fprintf(arq, "Resultado: nao sorteado!\n\n");
+    }
+
+    fclose(arq);
 
     return 0;
     
